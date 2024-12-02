@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    padding: 0; 
+    margin: 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: Inter, Roboto, sans-serif;
+    overflow-x: hidden;
+    background: $primary;
+    color: $light;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button {
+    font-family: Inter, Roboto, sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    color: $light;
+    font-size: 16px;
+}
+
+a {
+    color: $light;
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1366px) {
+        width: calc(100vw - 30px);
+        padding: 0 15px;
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+h2 {
+    color: $light;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 1366) {
+        font-size: 18px;
+    }
+}
+
+.buttonMore {
+    color: $light;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: color 0.25s;
+    &:hover {
+        color: $action;
+    }
+
+    @media only screen and (max-width: 1366px) {
+        font-size: 12px;
+        margin-top: 25px;
+    }
+}
+
+.loader {
+    min-height: 20vh;
+    width: 100%;
+    position: relative;
+    @include flex;
+    img {
+        max-width: 50px;
+        animation: beat 0.75s linear infinite;
+    }
+}
+
+.page{
+    padding: 40px 0;
+    &Title{
+        color: $light;
+        font-size: 60px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 125%;
+
+        @media only screen and (max-width: 1366px) {
+            font-size: 40px;
+        }
+        @media only screen and (max-width: 750px) {
+            font-size: 24px;
+        }
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}

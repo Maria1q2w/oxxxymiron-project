@@ -1,0 +1,174 @@
+.oxxxyshop {
+    &List {
+        margin-top: 24px;
+
+        &Menu {
+
+            &Line {
+                .active {
+                    color: $action;
+                }
+                &:hover {
+                    .icon {
+                        fill: $action;
+                        transition: 0.5s;
+                    }
+                    color: $action;
+                    transition: 0.5s;
+                }
+            }
+            
+            &Item {
+                color: $light;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 125%;
+                cursor: pointer;
+                .icon {
+                    vertical-align: -3px;
+                    margin-right: 10px;
+                    fill: $light;
+                    width: 18px;
+                    height: 18px;
+                    
+                }
+                
+            }
+            
+            &Items {
+                padding: 15px 15px;
+                text-align: start;
+            }
+        }
+
+        &Filter {
+            position: relative;
+
+            
+            &Items {
+                opacity: 0;
+                margin-top: 50px;
+                position: absolute;
+                background: $dark;
+                border-radius: 15px;
+                
+                &Opened {
+                    opacity: 1;
+                    z-index: 3;
+                    width: 250px;
+                    height: max-content;
+                }
+            }
+            
+        }
+
+        &Container  {
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            
+            &Title {
+                font-size: 22px;
+                position: absolute;
+                top: 10px;
+                left: 15px;
+            }
+
+            &Item {
+                background-color: $dark;
+                border-radius: 15px;
+                height: 350px;
+                position: relative;
+                text-align: center;
+                border: 1.5px solid transparent;
+                transition: border-color 0.3s;
+                &:hover {
+                    border-color: $action;
+                }
+
+                &OldPrice {
+                    font-size: 14px;
+                    color: $grey;
+                    text-decoration: line-through;
+                }
+
+                &Sum {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 20px;
+                } 
+
+                &Basket {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 20px;
+                    border-radius: 7px;
+                    z-index: 13;
+                }
+
+                &Number {
+                    display: inline-flex;
+                    position: absolute;
+                    left: 55%;
+                    transform: translateX(-50%);
+                    align-items: center;
+                    bottom: 15px
+                }
+
+                &Button{
+                    @include button;
+                    background-color: $dark;
+                    min-width: 50px;
+                    width: 50px;
+                    .icon {
+                        fill: white;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                
+
+                &Img {
+                    border-radius: 15px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                    transform: translate(-50%, -50%);
+                }
+                
+            }
+        }
+
+        &Input {
+            background-color: $dark;
+            margin-right: 10px;
+            border-bottom: 1px solid $action;
+            padding-left: 10px
+        }
+
+        &Button{
+            @include button;
+            background-color: $dark;
+            min-width: 50px;
+            width: 50px;
+            .icon {
+                fill: white;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+        &Header {
+            display: grid;
+            grid-template-columns: 60px 60px 1fr 60px;
+            justify-content: space-between;
+        }
+        
+    }
+}

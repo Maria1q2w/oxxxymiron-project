@@ -1,0 +1,143 @@
+.tour{
+    padding: 20px 0;
+
+    &Page {
+        position: relative;
+
+        &Img {
+            object-fit: cover;
+            display: block;
+            width: 100vw;
+            max-width: 1920px;
+            height: 100vh;
+            max-height: 945px;
+            top: -70px;
+            position: absolute;
+            //left: -50%;
+            //transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+
+    &Tabs {
+        @include flex;
+        justify-content: flex-start;
+        margin: 30px 0;
+        column-gap: 16px;
+    }
+
+    &Tab {
+        color: $grey;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            background: $action;
+            bottom: -4px;
+            transition: width 0.25s;
+        }
+
+        &.active {
+            color: $light;
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &Item {
+        @include flex;
+        padding: 29px 0;
+        text-transform: uppercase;
+        justify-content: space-between;
+        border-top: 1px solid rgba(217, 217, 217, 0.50);
+
+        &:last-child {
+            border-bottom:  1px solid rgba(217, 217, 217, 0.50);
+        }
+    
+        @media only screen and (max-width: 750px) {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            padding: 14px 0;
+            align-items: flex-start;
+        }
+        &Date {
+            color: $light;
+            font-size: 20px;
+            font-weight: 900;
+
+            @media only screen and (max-width: 1366px) {
+                font-size: 16px;
+            }
+        }
+        &Place {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 3px;
+
+            @media only screen and (max-width: 1366px) {
+                font-size: 12px;
+            }
+
+            @media only screen and (max-width: 750px) {
+                margin-top: 0;
+            }
+        }
+        &City  {
+            color: $light;
+            font-size: 24px;
+            font-weight: 700;
+
+            @media only screen and (max-width: 1366px) {
+                font-size: 18px;
+            }
+
+            @media only screen and (max-width: 750px) {
+                font-size: 16px;
+            }
+        }
+        &Button {
+            @include button;
+
+            &.soldout {
+                background: #505050;
+                text-transform: uppercase;
+                cursor: not-allowed;
+                font-size: 14px;
+                font-weight: 500;
+
+                @media only screen and (max-width: 1366px) {
+                    font-size: 12px;
+                }
+            }
+
+            @media only screen and (max-width: 750px) {
+                width: 100%;
+            }
+        }
+    }
+    
+
+    &List {
+        margin-top: 20px;
+    }
+    &Banner {
+        position: relative;
+        padding-top: 80px;
+
+        video{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

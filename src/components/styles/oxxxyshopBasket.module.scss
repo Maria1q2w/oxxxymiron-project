@@ -1,0 +1,55 @@
+.oxxxyshop {
+    &Basket {
+        &List {
+            margin-top: 24px;
+            &Item {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 20px;
+                background-color: $dark;
+                border-radius: 15px;
+                height: 100px;
+                margin-bottom: 15px;
+                &Title {
+                    position: absolute;
+                    top: 20px;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                &Sum {
+                    margin-top: 40px;
+                }
+
+                &Delete {
+                    &:hover{
+                        color: $action;
+                        transition: 0.5s;
+                    }
+                    //display: flex;
+                }
+
+            }
+            &Result{
+                font-weight: 600;
+                font-size: 24px;
+                padding-bottom: 15px;
+            }
+            &Clear{
+                &Basket {
+                    @include button ();
+                    border-radius: 10px;
+                    background-color: $light;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            &Finally{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}

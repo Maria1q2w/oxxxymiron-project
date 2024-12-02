@@ -1,0 +1,186 @@
+.news {
+    margin-top: 24px;
+
+    @media only screen and (max-width: 1366px) {
+        margin-top: 16px;
+    }
+
+    &Section {
+        background: $primary;
+        padding: 64px 0;
+
+        @media only screen and (max-width: 1366px) {
+            padding: 32px 0;
+        }
+    }
+
+    &Single {
+        &Item {
+            &Title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &Date {
+                color: $grey;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+
+            &Content {
+                margin-top: 24px;
+                color: $light;
+                font-size: 14px;
+                line-height: 120%;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                a {
+                    text-decoration: underline;
+                    color: $action;
+
+                    &:hover {
+                        color: lighten($action, 20%);
+                    }
+                }
+
+                p {
+                    margin: 12px 0;
+                }
+
+                img {
+                    margin: 16px 0;
+                    display: block;
+                    width: 800px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &List {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-top: 20px;
+
+        &Item {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: 24px;
+
+            @media only screen and (max-width: 750px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &Img {
+                min-width: 300px;
+                height: 168px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                @media only screen and (max-width: 750px) {
+                    min-width: 100%;
+                    background-position: top center;
+                }
+            }
+
+            &Info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &Title {
+                color: $light;
+                font-size: 24px;
+                font-weight: 700;
+                text-decoration: uppercase;
+                margin-top: 8px;
+                line-height: 125%;
+
+                @media only screen and (max-width: 1366px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+
+            &Button {
+                @include button;
+                width: max-content;
+                margin-top: auto;
+
+                @media only screen and (max-width: 750px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &Item {
+        &Img {
+            width: 100%;
+            height: 188px;
+            overflow: hidden;
+            Img {
+                max-width: unset;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &Title {
+            color: $light;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 18px;
+            margin-top: 24px;
+
+            @media only screen and (max-width: 1366px) {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+    @media only screen and (max-width: 1366px) {
+        margin-top: 16px;
+    }
+
+    &Button {
+        cursor: pointer;
+        .icon {
+            width: 64px;
+            height: 64px;
+            fill: $light;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+
+            @media only screen and (max-width: 1366px) {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        &:hover {
+            .icon {
+                opacity: 1;
+            }
+        }
+    }
+    &Next {
+        .icon {
+            transform: rotate(180deg);
+        }
+
+    }
+}

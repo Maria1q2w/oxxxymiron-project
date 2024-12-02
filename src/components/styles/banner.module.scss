@@ -1,0 +1,228 @@
+.banner {
+    min-height: 540px;
+    position: relative;
+
+    @media only screen and (max-width: 1366px) {
+        min-height: 250px;
+    }
+    //@include center;
+    //display: flex;
+    //justify-content: center;
+    //display: table-cell;
+    //vertical-align: middle;
+    
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: center;
+    &Img {
+        @include center;
+        width: 1200px;
+        height: auto;
+
+        @media only screen and (max-width: 1366px) {
+            width: 500px;
+        }
+    }
+}
+
+.container2 {
+    @include center;
+    
+}
+
+.text {
+    //margin: 0;
+    
+    font-size: 64px;
+    letter-spacing: 12px;
+    font-style: italic;
+    //transform: scale(1.5, 0.7);
+    transform: translate(-50%, 190%);
+    @media only screen and (max-width: 750px) {
+        font-size: 38px;
+    }
+
+
+    //@include font;
+}
+
+.shop {
+    &Banner {
+        background: rgb(25, 27, 35);
+        width: 100%;
+        height: 336px;
+        padding-left: 24px;
+        align-items: center;
+        display: flex;
+        position: relative;
+        margin-bottom: 100px;
+
+        @media only screen and (max-width: 1366px) {
+            height: 230px;   
+        }
+
+        @media only screen and (max-width: 750px) {
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        &Text {
+            @media only screen and (max-width: 1366px) {
+                position: relative;
+                z-index: 3;
+            }
+
+            @media only screen and (max-width: 750px) {
+                padding-bottom: 15px;
+            }
+        }
+        &Subtitle {
+            color: $light;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 32px;
+
+            @media only screen and (max-width: 1366px) {
+                font-size: 18px; 
+                line-height: 125%; 
+            }
+
+            @media only screen and (max-width: 750px) {
+                font-size: 14px;
+                padding-left: 30px;
+            }
+        }
+        &Title {
+            color: $light;
+            font-size: 70px;
+            font-weight: 900;
+            line-height: normal;
+            line-height: 125%;
+            margin-top: 32px;
+
+            @media only screen and (max-width: 1366px) {
+                font-size: 50px;  
+            }
+
+            @media only screen and (max-width: 750px) {
+                font-size: 45px;  
+                margin-top: 0px;
+                padding-right: 15px;
+            }
+        }
+
+        &Wrapper {
+            overflow: hidden;
+            min-height: 540px;
+            margin-top: 280px;
+            display: flex;
+            align-items: flex-end;
+
+            @media only screen and (max-width: 1366px) {
+                min-height: 504px;
+                margin-top: 270px;
+                padding-bottom: 105px;
+            }
+
+            
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+            .shopLogo {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:after, &:before {
+            content: "";
+            display: block;
+            @include center;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+        }
+    
+        &:before {
+            background: url("../images/effect.webp") no-repeat center/contain;
+        }
+        &:after {
+            background: url("../images/banner-glow.webp") no-repeat center/cover;
+            opacity: 0.5;
+            transition: opacity 0.25s;
+        }
+
+        &Image {
+            position: absolute;
+            right: 10%;
+            bottom: -23px;
+            z-index: 2;
+
+            @media only screen and (max-width: 1366px) {
+                right: 3%;
+            }
+
+            @media only screen and (max-width: 750px) {
+                width: 100%;
+                height: 100%;
+                right: 0;
+                bottom: 0;
+            }
+
+            img {
+                height: 450px;
+                width: auto;
+
+                @media only screen and (max-width: 1366px) {
+                    height: 300px;
+                    width: auto;
+                }
+
+                @media only screen and (max-width: 750px) {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    bottom: -8px;
+                    height: 300px;
+                    width: auto;
+                }
+            }
+        }
+        &Logo {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            z-index: 1;
+            img {
+                transition: transform 1s ease-in-out;
+                transform: rotate(0);
+                width: 230px;
+                height: 230px;
+
+                @media only screen and (max-width: 1366px) {
+                    width: 150px; 
+                    height: auto;
+                }
+
+                @media only screen and (max-width: 750px) {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+            @media only screen and (max-width: 1366px) {
+                top: 50px;
+                right: 20px;
+            }
+
+            @media only screen and (max-width: 750px) {
+                top: 10px;
+                right: 15px;
+                z-index: 2;
+            }
+        }
+    }
+
+    
+}
