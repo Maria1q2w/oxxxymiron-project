@@ -15,8 +15,6 @@ export const BasketProvider = ({ children }) => {
         const item = basketItems.find((item) => item.id === id);
         const quantity = item ? item.quantity : 0;
 
-        console.log(item, "itemop");
-
         if (quantity > 1) {
             dispatch(updateItemQuantity({ id, quantity: quantity - 1 }));
         } else if (quantity === 1) {

@@ -40,10 +40,20 @@
                 &Basket {
                     @include button ();
                     border-radius: 10px;
-                    background-color: $light;
+                    background-color: $grey;
                     display: inline-block;
                     text-align: center;
+                    width: 100px;
+                    &:hover {
+                        background-color: $light;
+                    }
                 }
+            }
+            &Payment {
+                @include button();
+                border-radius: 10px;
+                display: inline-block;
+                text-align: center;
             }
             &Finally{
                 display: flex;

@@ -110,12 +110,18 @@
                 }
 
                 &Number {
+                    background-color: $primary;
+                    border-radius: 15px;
                     display: inline-flex;
                     position: absolute;
                     left: 55%;
                     transform: translateX(-50%);
                     align-items: center;
-                    bottom: 15px
+                    bottom: 15px;
+                    .icon {
+                        padding-top: 3px;
+                        cursor: pointer;
+                    }
                 }
 
                 &Button{

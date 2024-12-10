@@ -5,7 +5,7 @@ import NewsPage from '../News/NewsPage';
 import NewsSingle from '../News/NewsSingle';
 import OxxxyshopPage from '../oxxxyshop/Oxxxyshop';
 import OxxxyshopBasket from '../oxxxyshop/OxxxyshopBasket';
-import OxxxyshopItem from '../oxxxyshop/OxxxyshopItem';
+import OxxxyshopItemId from '../oxxxyshop/OxxxyshopItemId';
 import TourPage from '../Tour/TourPage';
 import TracksPage from '../Tracks/TracksPage';
 
@@ -18,7 +18,7 @@ const AppRoutes = () => (
         <Route path="/news/:id" element={<NewsSingle />} />
         <Route path="/shop" element={<OxxxyshopPage />} />
         <Route path="/shop/basket" element={<OxxxyshopBasket />} />
-        <Route path="/shop/:id" element={<OxxxyshopItem />} />
+        <Route path="/shop/:id" element={<OxxxyshopItemId />} />
     </Routes>
 )
 

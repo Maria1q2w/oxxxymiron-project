@@ -10,7 +10,7 @@ import PageTitle from '../Title/PageTitle';
 import { sortByPopular, sortByPriceBig, sortByPriceSmall, getOldItems, sortBySearch } from '../utils/common';
 import { FILTER_MENU, FILTER_CATEGORY } from '../utils/constants';
 import { useBasket } from './BasketContext';
-import OxxxyshopItems from './OxxxyshopItems';
+import OxxxyshopItem from './OxxxyshopItem';
 
 const OxxxyshopPage = () => {
     const [material, setMaterial] = useState("all");
@@ -156,7 +156,7 @@ const OxxxyshopPage = () => {
                             {items && filteredItems.map(({ title, cover: { url }, sys: { id }, sum, oldPrice }, i) => {
                                 return (
                                     <span key={`${i}-${id}`}>
-                                        <OxxxyshopItems key={`${id}-${i}`}
+                                        <OxxxyshopItem key={`${id}-${i}`}
                                             oldPrice={oldPrice}
                                             title={title}
                                             url={url}

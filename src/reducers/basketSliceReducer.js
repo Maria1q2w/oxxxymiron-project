@@ -31,20 +31,6 @@ const basketSlice = createSlice({
                     existingItem.quantity = quantity;
                 }
             }
-
-            // const itemIndex = state.items.findIndex((item) => {
-            // return item.id === id; 
-            // });
-
-            // if (itemIndex !== -1) {
-            //     if (quantity === 0) {
-            //         state.items.splice(itemIndex, 1);
-            //     } else {
-            //         state.items[itemIndex].quantity = quantity;
-            //     }
-            // } else if (quantity > 0) {
-            //     state.items.push({ id, quantity });
-            // }
         },
         clearBasket: (state) => {
             state.items = [];
